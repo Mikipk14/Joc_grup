@@ -34,20 +34,22 @@ animations = [ {
 extents = Vector2( 3, 2 )
 
 [node name="Node2D" type="Node2D"]
+rotation = -0.017732
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Ak-47" type="Sprite" parent="Area2D"]
-position = Vector2( 220, 183 )
+rotation = -0.0543789
 texture = ExtResource( 4 )
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite1" type="AnimatedSprite" parent="Area2D/Ak-47"]
 position = Vector2( 22, -1.37501 )
+rotation = -2.97997
 scale = Vector2( 0.15625, 0.140625 )
 frames = SubResource( 5 )
 animation = "Disparar"
-frame = 2
+frame = 3
 speed_scale = 3.0
 playing = true
 
@@ -57,12 +59,10 @@ current = true
 zoom = Vector2( 0.2, 0.2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
 position = Vector2( 243, 182 )
 shape = SubResource( 6 )
 
 [node name="BalaBlava" type="Sprite" parent="Area2D"]
-visible = false
 position = Vector2( 243, 182 )
 scale = Vector2( 0.149691, 0.131483 )
 texture = ExtResource( 2 )

@@ -16,10 +16,7 @@ func _process(delta):
 	anima1()
 	if Input.is_action_pressed("Disparar"):
 		anima1()
-
-func _physics_process(delta):
-	position += transform.x * speed * delta
 		
-	
 func anima1():
-	$AnimatedSprite1.play("Disparar")
+	if Input.is_action_just_pressed("Disparar"):
+		$AnimatedSprite1.play("Disparar")

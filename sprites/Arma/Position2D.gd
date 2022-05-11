@@ -9,10 +9,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-#	var direccio = global_position.direction_to(get_global_mouse_position())
+	if Input.is_action_just_pressed("Disparar"):
+		dispara()
 	look_at(get_global_mouse_position())
+	
+#	var direccio = global_position.direction_to(get_global_mouse_position())
 	pass
 
 func dispara():
 	var nova_bala = bala.instance()
-	nova_bala.global_position = $Punta.global_position
+	nova_bala.global_position = $"Ak-47/Punta".global_position
+	nova_bala.look_at(get_global_mouse_position())
+	nova_bala.velocitat = 300 * nova_bala.global_position.direction_to(get_global_mouse_position())
+	get_tree().current_scene.add_child(nova_bala)
+	

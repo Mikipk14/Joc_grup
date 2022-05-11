@@ -15,5 +15,4 @@ func _process(delta):
 
 func dispara():
 	var nova_bala = bala.instance()
-	nova_bala.global_position = 
-	pass
+	nova_bala.global_position = $Punta.global_position

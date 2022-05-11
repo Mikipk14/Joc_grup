@@ -48,5 +48,21 @@ func anima(moviment:Vector2):
 
 
 func _on_ports_casa_gran_body_entered(body):
+<<<<<<< HEAD
 	get_tree().change_scene("res://scenes/escena1_Casa.tscn")
 	# canviar limits camera
+=======
+	Global.lastpos = global_position + Vector2(0, 10)
+	get_tree().change_scene("res://scenes/escena_Casa.tscn")
+
+
+func _on_Area2D_body_entered(body):
+	print(body)
+	Global.lastpos = global_position + Vector2(0, 20)
+	get_tree().change_scene("res://scenes/escena_Casa2.tscn")
+
+
+func _on_casa3_body_entered(body):
+	Global.lastpos = global_position + Vector2(0, 10)
+	get_tree().change_scene("res://scenes/escena_Casa3.tscn")
+>>>>>>> ALEX2

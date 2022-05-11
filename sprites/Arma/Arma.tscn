@@ -57,8 +57,3 @@ speed_scale = 4.0
 [node name="Punta" type="Position2D" parent="Ak-47"]
 position = Vector2( 16.3003, -1.0112 )
 scale = Vector2( 1.01877, 1.0112 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-scale = Vector2( 0.981575, 0.988927 )
-current = true
-zoom = Vector2( 0.2, 0.2 )

@@ -12,6 +12,7 @@ size = 58
 font_data = ExtResource( 4 )
 
 [node name="menu" type="Node2D"]
+position = Vector2( 1, 0 )
 script = ExtResource( 6 )
 
 [node name="MenuBackground" type="Sprite" parent="."]

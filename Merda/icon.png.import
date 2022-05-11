@@ -2,24 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-<<<<<<< HEAD:Merda/icon.png.import
 path="res://.import/icon.png-a6f5dc22ab207b21c2e9024197b7db29.stex"
-=======
-path="res://.import/1.png-ae74704c970287076c557563eedd96ce.stex"
->>>>>>> miquel:sprites/Arma/1.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD:Merda/icon.png.import
 source_file="res://Merda/icon.png"
 dest_files=[ "res://.import/icon.png-a6f5dc22ab207b21c2e9024197b7db29.stex" ]
-=======
-source_file="res://sprites/Arma/1.png"
-dest_files=[ "res://.import/1.png-ae74704c970287076c557563eedd96ce.stex" ]
->>>>>>> miquel:sprites/Arma/1.png.import
 
 [params]
 

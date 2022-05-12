@@ -48,3 +48,14 @@ func _on_Area2D_body_entered(body):
 func _on_casa3_body_entered(body):
 	Global.lastpos = global_position + Vector2(0, 10)
 	get_tree().change_scene("res://scenes/escena_Casa3.tscn")
+<<<<<<< Updated upstream
+=======
+	
+func vida():
+	Global.perd_vida($HUD/AnimatedSprite)
+
+
+func _on_casa4_body_entered(body):
+	Global.lastpos = global_position + Vector2(0, 10)
+	get_tree().change_scene("res://scenes/escena_Casa4.tscn")
+>>>>>>> Stashed changes

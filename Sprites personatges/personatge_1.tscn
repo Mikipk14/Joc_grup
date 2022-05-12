@@ -18,19 +18,14 @@ extents = Vector2( 5, 6.5 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "camina cara",
+"name": "costat",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "camina costat",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "costat",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
@@ -46,6 +41,11 @@ animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "cara",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "camina cara",
 "speed": 5.0
 } ]
 
@@ -72,6 +72,6 @@ drag_margin_h_enabled = true
 
 [node name="HUD" parent="." instance=ExtResource( 10 )]
 
-[node name="Node2D" parent="." instance=ExtResource( 11 )]
+[node name="Arma" parent="." instance=ExtResource( 11 )]
 position = Vector2( -13, -6 )
 scale = Vector2( 0.5, 0.5 )

@@ -9,7 +9,7 @@ var limit_top = -50
 var limit_right = 400
 var limit_bottom = 385
 
-func principi_escena(n_escena, camera:Camera2D, personatge:KinematicBody2D):
+func principi_escena(n_escena, camera:Camera2D, personatge:KinematicBody2D, hp:AnimatedSprite):
 	match n_escena:
 		0:
 			limit_left = 3.5
@@ -26,11 +26,14 @@ func principi_escena(n_escena, camera:Camera2D, personatge:KinematicBody2D):
 	camera.limit_top = limit_top
 	camera.limit_right = limit_right
 	camera.limit_bottom = limit_bottom
+	update_hp(vida, hp)
 
 
 func perd_vida(hp:AnimatedSprite):
 	vida -= 25
+	update_hp(vida, hp)
 	
+func update_hp(vida, hp:AnimatedSprite):
 	if vida <= 0:
 		hp.frame = 4
 	elif vida <= 25:

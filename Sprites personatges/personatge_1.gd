@@ -7,6 +7,8 @@ var moviment := Vector2.ZERO
 
 func _process(delta):
 	direccio = Vector2.ZERO
+	if Input.is_action_just_pressed("ui_home"):
+		vida()
 	if Input.is_action_pressed("dreta"):
 		direccio += Vector2.RIGHT
 	if Input.is_action_pressed("esquerra"):
@@ -48,6 +50,7 @@ func _on_Area2D_body_entered(body):
 func _on_casa3_body_entered(body):
 	Global.lastpos = global_position + Vector2(0, 10)
 	get_tree().change_scene("res://scenes/escena_Casa3.tscn")
+<<<<<<< HEAD
 
 func vida():
 	Global.perd_vida($HUD/AnimatedSprite)
@@ -57,3 +60,8 @@ func _on_casa4_body_entered(body):
 	Global.lastpos = global_position + Vector2(0, 10)
 	get_tree().change_scene("res://scenes/escena_Casa4.tscn")
 
+=======
+	
+func vida():
+	Global.perd_vida($HUD/AnimatedSprite)
+>>>>>>> main

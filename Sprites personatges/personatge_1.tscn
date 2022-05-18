@@ -10,7 +10,7 @@
 [ext_resource path="res://personatges/personatges/cabell negre/tile_0428.png" type="Texture" id=8]
 [ext_resource path="res://personatges/personatges/cabell negre/tile_0482.png" type="Texture" id=9]
 [ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=10]
-[ext_resource path="res://EscenaArma.tscn" type="PackedScene" id=11]
+[ext_resource path="res://sprites/Arma/EscenaArma.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Sprites personatges/personatge_1.gd" type="Script" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -18,19 +18,9 @@ extents = Vector2( 5, 6.5 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "costat",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "camina costat",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "esquena",
+"name": "camina cara",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
@@ -43,9 +33,19 @@ animations = [ {
 "name": "cara",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "camina cara",
+"name": "costat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "esquena",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "camina costat",
 "speed": 5.0
 } ]
 

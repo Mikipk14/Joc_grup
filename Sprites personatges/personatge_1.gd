@@ -38,7 +38,7 @@ func anima(moviment:Vector2):
 
 func _on_ports_casa_gran_body_entered(body):
 	Global.lastpos = global_position + Vector2(0, 10)
-	get_tree().change_scene("res://scenes/escena_Casa.tscn")
+	get_tree().change_scene("res://scenes/escena_Casa4.tscn")
 
 
 func _on_Area2D_body_entered(body):

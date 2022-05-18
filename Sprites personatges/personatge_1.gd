@@ -40,19 +40,24 @@ func anima(moviment:Vector2):
 
 
 func _on_ports_casa_gran_body_entered(body):
-	Global.lastpos = global_position + Vector2(0, 10)
+	Global.lastpos = global_position + Vector2(-13, 0)
 	get_tree().change_scene("res://scenes/escena_Casa.tscn")
 
 
 func _on_Area2D_body_entered(body):
 	print(body)
-	Global.lastpos = global_position + Vector2(0, 20)
+	Global.lastpos = global_position + Vector2(-10, 20)
 	get_tree().change_scene("res://scenes/escena_Casa2.tscn")
 
 
 func _on_casa3_body_entered(body):
-	Global.lastpos = global_position + Vector2(0, 10)
+	Global.lastpos =  Vector2(272, 350)
 	get_tree().change_scene("res://scenes/escena_Casa3.tscn")
 	
 func vida():
 	Global.perd_vida($HUD/AnimatedSprite)
+
+
+func _on_casa7_body_entered(body):
+	get_tree().change_scene("res://scenes/.tscn")
+	pass # Replace with function body.

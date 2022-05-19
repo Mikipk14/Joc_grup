@@ -15,7 +15,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	anima(velocitat_x)
-	print(Node2D.get_personatge_position())
+	#print(Node2D.get_personatge_position())
 	
 func anima(velocitat_x):
 	if velocitat_x > Vector2(0,0):

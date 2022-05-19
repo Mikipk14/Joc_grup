@@ -12,9 +12,15 @@ func _process(delta):
 	if Input.is_action_just_pressed("Disparar"):
 		dispara()
 	look_at(get_global_mouse_position())
-	
-#	var direccio = global_position.direction_to(get_global_mouse_position())
-	pass
+	print(rotation_degrees)
+	if rotation_degrees >= 360:
+		rotation_degrees -= 360
+	elif rotation_degrees < 0:
+		rotation_degrees += 360
+	if rotation_degrees > 90 and rotation_degrees < 270:
+		$"Ak-47".flip_v = true
+	else:
+		$"Ak-47".flip_v = false 
 
 func dispara():
 	var nova_bala = bala.instance()

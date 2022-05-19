@@ -1,5 +1,6 @@
 extends Node
 
+var Jugador : KinematicBody2D
 var lastpos = Vector2(30,230)
 
 var vida = 100

@@ -4,8 +4,11 @@ var velocitat = Vector2(100,-100)
 var direccio = Vector2.ZERO
 var moviment := Vector2.ZERO
 
-
+func _ready():
+	Global.Jugador = self
+	
 func _process(delta):
+	print(global_position)
 	direccio = Vector2.ZERO
 	if Input.is_action_just_pressed("ui_home"):
 		vida()

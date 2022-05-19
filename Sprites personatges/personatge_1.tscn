@@ -23,9 +23,9 @@ animations = [ {
 "name": "camina cara",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "camina esquena",
+"name": "esquena",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -38,9 +38,9 @@ animations = [ {
 "name": "costat",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
 "loop": true,
-"name": "esquena",
+"name": "camina esquena",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
@@ -61,13 +61,14 @@ frames = SubResource( 2 )
 animation = "camina costat"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, 3 )
 rotating = true
 current = true
 zoom = Vector2( 0.4, 0.4 )
 limit_left = 10
 limit_top = 0
 limit_right = 1024
-limit_bottom = 600
+limit_bottom = 608
 drag_margin_h_enabled = true
 
 [node name="HUD" parent="." instance=ExtResource( 10 )]

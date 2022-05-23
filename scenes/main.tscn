@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Merda/Kenney Pixel.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites personatges/personatge_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/scripts/Label.gd" type="Script" id=3]
+[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/main.gd" type="Script" id=5]
 [ext_resource path="res://scenes/TileMap.tscn" type="PackedScene" id=6]
 
@@ -88,6 +89,8 @@ per salvar el poblat."
 uppercase = true
 percent_visible = 0.0
 script = ExtResource( 3 )
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
 
 [connection signal="body_entered" from="TileMap2/casa4" to="Personatge1" method="_on_ports_casa_gran_body_entered"]
 [connection signal="body_entered" from="TileMap2/casa2" to="Personatge1" method="_on_ports_casa_gran_body_entered"]

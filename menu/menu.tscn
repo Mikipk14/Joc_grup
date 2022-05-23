@@ -46,7 +46,7 @@ margin_top = 276.0
 margin_right = 1006.0
 margin_bottom = 348.0
 custom_fonts/font = SubResource( 1 )
-text = "GAMENAME"
+text = "shadow city"
 
 [node name="welcome to" type="Label" parent="."]
 margin_left = 194.0

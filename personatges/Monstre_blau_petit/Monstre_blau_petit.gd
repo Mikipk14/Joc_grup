@@ -23,7 +23,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-<<<<<<< HEAD
 	#anima(velocitat_x)
 	pass
 	#print(Node2D.get_personatge_position())
@@ -32,9 +31,7 @@ func _process(delta):
 	var moviment = move_and_slide(velocitat_max * direccio)
 	anima(moviment)
 
-=======
 	anima(velocitat_x)
->>>>>>> abbc227995b386533f318782f81457ef19a6d57c
 	
 	
 func anima(velocitat_x):

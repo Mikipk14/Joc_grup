@@ -4,9 +4,8 @@ extends KinematicBody2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var Velocitat=1
-var velocitat_y = Vector2.DOWN
-var velocitat_x = Vector2.RIGHT
+var velocitat_max = 30
+var direccio = Vector2.RIGHT
 var vida = 100 setget canvia_vida
 var viu = true
 
@@ -31,16 +30,15 @@ func _process(delta):
 	var moviment = move_and_slide(velocitat_max * direccio)
 	anima(moviment)
 
-	anima(velocitat_x)
 	
 	
-func anima(velocitat_x):
+func anima(moviment):
 	if not viu:
 		return
-	if velocitat_x > Vector2(0,0):
+	if moviment.x > 0:
 		$AnimatedSprite.play("corre")
 		$AnimatedSprite.flip_h = false
-	if velocitat_x < Vector2(0,0):
+	if moviment.x < 0:
 		$AnimatedSprite.play("corre")
 		$AnimatedSprite.flip_h = true
 

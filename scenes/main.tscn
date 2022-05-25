@@ -3,7 +3,6 @@
 [ext_resource path="res://Merda/Kenney Pixel.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites personatges/personatge_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/scripts/Label.gd" type="Script" id=3]
-[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/main.gd" type="Script" id=5]
 [ext_resource path="res://scenes/TileMap.tscn" type="PackedScene" id=6]
 
@@ -21,6 +20,9 @@ extents = Vector2( 5, 4 )
 
 [sub_resource type="RectangleShape2D" id=52]
 extents = Vector2( 7, 4 )
+
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 15, 6 )
 
 [sub_resource type="DynamicFont" id=20]
 font_data = ExtResource( 1 )
@@ -67,6 +69,13 @@ collision_layer = 4
 position = Vector2( 184, 490 )
 shape = SubResource( 52 )
 
+[node name="casa7" type="Area2D" parent="TileMap2"]
+position = Vector2( 479.5, 233 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap2/casa7"]
+position = Vector2( 224.5, -34 )
+shape = SubResource( 53 )
+
 [node name="Personatge1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 53, 228 )
 scale = Vector2( 1.00144, 1 )
@@ -90,10 +99,12 @@ uppercase = true
 percent_visible = 0.0
 script = ExtResource( 3 )
 
-[node name="HUD" parent="." instance=ExtResource( 4 )]
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 272, 339 )
 
 [connection signal="body_entered" from="TileMap2/casa4" to="Personatge1" method="_on_ports_casa_gran_body_entered"]
 [connection signal="body_entered" from="TileMap2/casa2" to="Personatge1" method="_on_ports_casa_gran_body_entered"]
 [connection signal="body_entered" from="TileMap2/casa3" to="Personatge1" method="_on_casa3_body_entered"]
 [connection signal="body_entered" from="TileMap2/casa5" to="Personatge1" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="TileMap2/casa6" to="Personatge1" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="TileMap2/casa7" to="Personatge1" method="_on_casa7_body_entered"]

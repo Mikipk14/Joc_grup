@@ -27,8 +27,8 @@ func _process(delta):
 	pass
 	#print(Node2D.get_personatge_position())
 
-	direccio = global_position.direction_to(Global.Jugador.global_position)
-	var moviment = move_and_slide(velocitat_max * direccio)
+	var direccio = global_position.direction_to(Global.Jugador.global_position)
+	var moviment = move_and_slide(20 * direccio)
 	anima(moviment)
 
 	anima(velocitat_x)

@@ -13,7 +13,7 @@ var viu = true
 func canvia_vida(nova_vida):
 	vida = nova_vida
 	$BarraVida.value = vida
-	if vida <= 0:
+	if vida <= 25:
 		viu = false
 		print('MORT!---------------------')
 		$AnimatedSprite.play("mor")

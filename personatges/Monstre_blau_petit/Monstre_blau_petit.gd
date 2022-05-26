@@ -19,6 +19,11 @@ func _process(delta):
 	
 	
 func anima(moviment):
+<<<<<<< Updated upstream
+=======
+	if not viu:
+		return
+>>>>>>> Stashed changes
 	if moviment.x > 0:
 		$AnimatedSprite.play("corre")
 		$AnimatedSprite.flip_h = false

@@ -57,7 +57,7 @@ func _on_casa3_body_entered(body):
 func vida():
 	Global.perd_vida($HUD/AnimatedSprite)
 
-
 func _on_casa7_body_entered(body):
-	get_tree().change_scene("res://scenes/.tscn")
-	pass # Replace with function body.
+	#Node2D.limits(2)
+	Global.lastpos = global_position + Vector2(-10, 20)
+	get_tree().change_scene("res://scenes/Cases/Copia_escena_Casa2.tscn")

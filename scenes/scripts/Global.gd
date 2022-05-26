@@ -20,7 +20,12 @@ func principi_escena(n_escena, camera:Camera2D, personatge:KinematicBody2D, hp:A
 			limit_left = -50
 			limit_top = -50
 			limit_right = 400
-			limit_bottom = 375
+			limit_bottom = 385
+		2:
+			limit_left = -50
+			limit_top = -50
+			limit_right = 680
+			limit_bottom = 500
 	
 	camera.limit_left = limit_left
 	camera.limit_top = limit_top
@@ -44,7 +49,3 @@ func update_hp(vida, hp:AnimatedSprite):
 		hp.frame = 1
 	else:
 		hp.frame = 0
-	
-	
-	
-	

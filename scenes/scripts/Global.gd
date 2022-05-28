@@ -36,6 +36,8 @@ func principi_escena(n_escena, camera:Camera2D, personatge:KinematicBody2D, hp:A
 
 func perd_vida(hp:AnimatedSprite):
 	vida -= 25
+	if vida == 0:
+		get_tree().change_scene("res://scenes/GameOver.tscn")
 	update_hp(vida, hp)
 	
 func update_hp(vida, hp:AnimatedSprite):

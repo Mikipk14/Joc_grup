@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://personatges/personatges/cabell negre/tile_0484.png" type="Texture" id=1]
 [ext_resource path="res://personatges/personatges/cabell negre/tile_0430.png" type="Texture" id=2]
@@ -23,11 +23,6 @@ animations = [ {
 "name": "cara",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "esquena",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "costat",
@@ -36,6 +31,11 @@ animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "camina cara",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "esquena",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
@@ -48,6 +48,9 @@ animations = [ {
 "name": "camina costat",
 "speed": 5.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10.4063, 9.73438 )
 
 [node name="Personatge1" type="KinematicBody2D"]
 script = ExtResource( 25 )
@@ -74,3 +77,11 @@ limit_bottom = 600
 [node name="Arma" parent="." instance=ExtResource( 11 )]
 position = Vector2( -13, -6 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="Area2D_personatge" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D_personatge"]
+position = Vector2( -1, 0 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area2D_personatge" to="." method="_on_Area2D_personatge_body_entered"]

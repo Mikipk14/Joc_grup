@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Merda/tilesheet_complete_2X.png" type="Texture" id=1]
 [ext_resource path="res://Merda/interior.png" type="Texture" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://personatges/Monstre_blau_petit/Monstre_blau_petit.tscn" type="PackedScene" id=6]
 [ext_resource path="res://personatges/Monstre_blau/Monstre_Blau.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Aldeano.tscn" type="PackedScene" id=8]
-[ext_resource path="res://personatges/Libél·lula/Libèl·lula.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1121,11 +1120,11 @@ position = Vector2( 152, 217 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Monstre gran" parent="." instance=ExtResource( 7 )]
-position = Vector2( 36, 246 )
+position = Vector2( 79, 228 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Aldeano" parent="." instance=ExtResource( 8 )]
-position = Vector2( 30, 303 )
+position = Vector2( 47, 283 )
 
 [node name="Label" type="Label" parent="Aldeano"]
 margin_left = -20.0
@@ -1134,27 +1133,5 @@ margin_right = 90.0
 margin_bottom = 2.0
 rect_scale = Vector2( 0.4, 0.4 )
 text = "Salvam siusplau! "
-
-[node name="Monstre petit5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 64, 279 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Monstre petit6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 125, 261 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Monstre petit7" parent="." instance=ExtResource( 6 )]
-position = Vector2( 94, 297 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Monstre petit8" parent="." instance=ExtResource( 6 )]
-position = Vector2( 178, 265 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Node2D" parent="." instance=ExtResource( 9 )]
-position = Vector2( 219, 169 )
-
-[node name="Node2D2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 242, 210 )
 
 [connection signal="body_entered" from="TileMap/Area2D" to="." method="_on_Area2D_body_entered"]

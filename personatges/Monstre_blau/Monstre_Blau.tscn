@@ -8,22 +8,6 @@
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 11, 9.25 )
 
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
-region = Rect2( 64, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 1 )
-region = Rect2( 128, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 1 )
-region = Rect2( 192, 64, 64, 64 )
-
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 256, 64, 64 )
@@ -48,36 +32,50 @@ region = Rect2( 256, 256, 64, 64 )
 atlas = ExtResource( 1 )
 region = Rect2( 320, 256, 64, 64 )
 
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 64, 64, 64 )
+
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
-"loop": true,
-"name": "corre",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
 "name": "mor",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "corre",
+"speed": 5.0
 } ]
 
-[node name="Node2D" type="Node2D"]
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3 )
 shape = SubResource( 6 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1, -7 )
 scale = Vector2( 0.671875, 0.640625 )
 frames = SubResource( 5 )
 animation = "mor"
 speed_scale = 2.0
 
-[node name="BarraVida" type="TextureProgress" parent="KinematicBody2D"]
+[node name="BarraVida" type="TextureProgress" parent="."]
 margin_left = -22.0
 margin_top = -21.0
 margin_right = 1074.0
@@ -88,4 +86,4 @@ value = 300.0
 texture_under = ExtResource( 4 )
 texture_progress = ExtResource( 3 )
 
-[connection signal="animation_finished" from="KinematicBody2D/AnimatedSprite" to="KinematicBody2D" method="_on_AnimatedSprite_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

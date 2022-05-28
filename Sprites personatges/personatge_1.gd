@@ -61,3 +61,7 @@ func _on_casa7_body_entered(body):
 	#Node2D.limits(2)
 	Global.lastpos = global_position + Vector2(-10, 20)
 	get_tree().change_scene("res://scenes/Cases/Copia_escena_Casa2.tscn")
+
+func _on_Area2D_personatge_body_entered(body):
+	if body.name == "KinematicBody2D" :
+		Global.perd_vida($HUD/AnimatedSprite)

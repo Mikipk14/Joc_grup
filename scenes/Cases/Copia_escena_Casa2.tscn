@@ -1,10 +1,13 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Merda/tilesheet_complete_2X.png" type="Texture" id=1]
 [ext_resource path="res://Merda/interior.png" type="Texture" id=2]
 [ext_resource path="res://Sprites personatges/personatge_1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/scripts/Pantalla_1.gd" type="Script" id=4]
 [ext_resource path="res://Merda/roguelikeIndoor_transparent.png" type="Texture" id=5]
+[ext_resource path="res://personatges/Libél·lula/Libèl·lula.tscn" type="PackedScene" id=6]
+[ext_resource path="res://personatges/Monstre_blau_petit/Monstre_blau_petit.tscn" type="PackedScene" id=7]
+[ext_resource path="res://personatges/Monstre_blau/Monstre_Blau.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=67]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -1559,5 +1562,53 @@ tile_data = PoolIntArray( 0, 39, 0, 1, 16, 0, 4, 16, 0, 7, 16, 0, 13, 16, 0, 22,
 
 [node name="Personatge1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 190, 5 )
+
+[node name="Monstre gran3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 566, 117 )
+scale = Vector2( 2, 2 )
+
+[node name="Monstre gran" parent="." instance=ExtResource( 8 )]
+position = Vector2( 100, 289 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Monstre petit2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 292, 210 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Monstre petit3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 471, 134 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Monstre petit4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 592, 182 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Monstre petit5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 525, 240 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Monstre petit6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 201, 303 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Monstre petit7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 151, 294 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Monstre petit8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 54, 289 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 496, 194 )
+
+[node name="Node2D7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 224, 189 )
+
+[node name="Node2D8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 494, 95 )
+
+[node name="Node2D9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 584, 374 )
 
 [connection signal="body_entered" from="TileMap/Area2D" to="." method="_on_Area2D_body_entered"]

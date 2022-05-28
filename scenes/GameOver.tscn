@@ -5,6 +5,6 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="GameOverImage" type="Sprite" parent="."]
-position = Vector2( 514.5, 306.5 )
-scale = Vector2( 0.654375, 0.698889 )
+position = Vector2( 514.5, 303.5 )
+scale = Vector2( 0.654375, 0.692222 )
 texture = ExtResource( 1 )

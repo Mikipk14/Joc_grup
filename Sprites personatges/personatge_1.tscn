@@ -28,16 +28,6 @@ animations = [ {
 "name": "costat",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "camina cara",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "esquena",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "camina esquena",
@@ -46,6 +36,16 @@ animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "camina costat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "camina cara",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "esquena",
 "speed": 5.0
 } ]
 
@@ -81,7 +81,6 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Area2D_personatge" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D_personatge"]
-position = Vector2( -1, 0 )
 shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Area2D_personatge" to="." method="_on_Area2D_personatge_body_entered"]
